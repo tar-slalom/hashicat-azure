@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "example" {
   location = "West Europe"
 }
 
-module "azure network" {
+module "azure_network" {
   source              = "Azure/network/azurerm"
   resource_group_name = azurerm_resource_group.example.name
   address_space       = "10.0.0.0/16"
